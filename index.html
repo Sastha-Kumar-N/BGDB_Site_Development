@@ -1,0 +1,391 @@
+<!doctype html>
+<html>
+<head>
+	<!-- Add Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="magicscroll/magicscroll.css"/>
+<script src="magicscroll/magicscroll.js"></script>
+
+<!-- Add Bootstrap JS (Popper.js and Bootstrap JS) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<meta charset="utf-8">
+	<style>
+		.navbar-nav .nav-link:hover {
+  background-color: #28a745; /* Green color for the overlay */
+  color: #fff; /* Text color on hover */
+}
+</style>
+	<style>
+  /* Custom styling for the banner */
+  .custom-banner {
+    background-color: #f5a623; /* Custom background color */
+    color: #fff; /* Custom text color */
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  .custom-banner h2 {
+    font-size: 36px; /* Custom font size for the heading */
+  }
+</style>
+<!--* Magic Scroll*/ -->
+<script>
+var MagicScrollOptions = {
+mode: "cover-flow",
+draggable: true
+};
+</script>	
+	<style>
+  /* Styling for the boxes */
+  .box {
+    border: 2px solid #28a745; /* Border color */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  /* Styling for the photo gallery images */
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image-container {
+    margin: 10px;
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width of each image container (33.33% for 3 columns) */
+    position: relative; /* Position relative for caption positioning */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd; /* Image border */
+    transition: transform 0.2s; /* Add a smooth hover effect */
+  }
+
+  .image-container img:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
+  }
+
+  /* Styling for captions */
+  .caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for caption */
+    color: #fff; /* Text color for caption */
+    padding: 5px 10px;
+    font-size: 14px;
+    opacity: 0; /* Hide the caption by default */
+    transition: opacity 0.2s;
+  }
+
+  .image-container:hover .caption {
+    opacity: 1; /* Show the caption on hover */
+  }
+</style>
+
+
+	
+<title>Bharat Genome Database</title>
+	<link rel="icon" type="image/icon-icon" href="icon.ico">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <strong><a href="#" target="_self" class="navbar-brand"> <img src="146484062_padded_logo.png" alt="Logo" width="60" height="60" class="rounded-circle img-fluid"> </a> <a class="navbar-brand" href="#"> </a>Bharat Genome Database</strong><a class="navbar-brand" href="#"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.youtube.com/channel/UC686io9IgaAAWO9ahozZIig">Research Portal</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Tools
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">BLAST</a>
+          <a class="dropdown-item" href="http://bharatgenometrial.online/jbrowse/">JBrowse</a>
+          <a class="dropdown-item" href="#">Synteny Viewer</a>
+			<a class="dropdown-item" href="http://bharatgenometrial.online/bgdbsite1/node/2">BGDB Data Depositer</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="News/index.html">News</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About Us/about.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://bharatgenometrial.online/bgdbsite1/node/1">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-primary" href="http://bharatgenometrial.online/bgdbsite/user/">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  .navbar-nav .nav-link:hover {
+    background-color: #28a745;
+    color: #fff;
+  }
+</style>
+<!-- Add this code below your navigation bar -->
+<div id="imageCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators (optional) -->
+  <ol class="carousel-indicators">
+    <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#imageCarousel" data-slide-to="1"></li>
+    <li data-target="#imageCarousel" data-slide-to="2"></li>
+    <li data-target="#imageCarousel" data-slide-to="3"></li>
+    <li data-target="#imageCarousel" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="link1.html">
+        <img src="1920x5002.png" alt="Image 1" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="link2.html">
+        <img src="1920x500 1.png" alt="Image 2" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="link3.html">
+        <img src="1920x500.gif" alt="Image 3" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="link4.html">
+        <img src="1920x500.gif" alt="Image 4" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="link5.html">
+        <img src="1920x500.gif" alt="Image 5" class="d-block w-100">
+      </a>
+    </div>
+  </div>
+
+  <!-- Controls (Next/Previous) -->
+  <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- Add this code below your carousel -->
+<div class="container-fluid mt-1">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <div class="custom-banner">
+        <h2 class="font-weight-bold">New Genomes on the Repository</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="MagicScroll mt-1">
+    <a href="resources/Rosaceae/Rosaceae.html"><img src="1.jfif"></a>
+    <a href="resources/Bryophytes/Bryophytes.html"><img src="2.jfif"></a>
+    <a href="resources/Rosaceae/Rosaceae.html"><img src="3.jfif"></a>
+    <a href="resources/Rosaceae/Rosaceae.html"><img src="4.jfif"></a>
+    <a href="resources/Rutaceae/Rutaceae.html"><img src="5.jfif"></a>
+    <a href="/page-6/"><img src="6.jpg"></a>
+    <a href="/page-7/"><img src="7.jfif"></a>
+    <a href="/page-8/"><img src="8.jpg"></a>
+    <a href="/page-9/"><img src="9.jfif"></a>
+	<a href="/page-9/"><img src="10.jfif"></a>
+
+</div>
+<div class="MagicScroll" data-options="mode: carousel; draggable: true;">
+	</div> 
+<!-- Add this code below the film strip carousel -->
+<!-- Add this code below the film strip carousel -->
+<div class="container-fluid mt-4">
+  <div class="row">
+    <!-- Resources Box -->
+    <div class="col-md-6">
+      <div class="box">
+        <h3 class="text-center font-weight-bold">Resources</h3>
+        <div class="photo-gallery">
+          <!-- Add your square images with links and captions here -->
+          <div class="image-container">
+            <a href="resources/Nelumbonaceae/Nelumbonaceae.html">
+              <img src="lotus.png" alt="Resource 1" class="img-fluid rounded">
+            </a>
+            <div class="caption">
+<p>Nelumbonaceae</p>
+            </div>
+          </div>
+			<div class="image-container">
+            <a href="resources/arecaceae/arecaceae.html">
+              <img src="coconut.png" alt="Resource 1" class="img-fluid rounded">
+            </a>
+            <div class="caption">Arecaceae</div>
+          </div>
+			<div class="image-container">
+            <a href="resources/Moraceae/Moraceae.html">
+              <img src="baniyan.png" alt="Resource 1" class="img-fluid rounded">
+            </a>
+            <div class="caption">Moraceae</div>
+          </div>
+			<div class="image-container">
+            <a href="resources/Rosaceae/Rosaceae.html">
+              <img src="rose.jpg" alt="Resource 1" class="img-fluid rounded">
+            </a>
+            <div class="caption">Rosaceae</div>
+          </div>
+			<div class="image-container">
+            <a href="resources/Rutaceae/Rutaceae.html">
+              <img src="orange.jpg" alt="Resource 1" class="img-fluid rounded">
+            </a>
+            <div class="caption">Rutaceae</div>
+          </div>
+			<div class="image-container">
+            <a href="resources/Bryophytes/Bryophytes.html">
+              <img src="2.jfif" alt="Resource 1" class="img-fluid rounded">
+            </a>
+            <div class="caption">Bryophtes</div>
+          </div>
+          <!--<div class="image-container">
+            <a href="resource2.html">
+              <img src="resource2.jpg" alt="Resource 2" class="img-fluid">
+            </a>
+            <div class="caption">Caption for Resource 2</div>
+          </div>
+          <!-- Add more images and captions as needed -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools Box -->
+    <div class="col-md-6">
+      <div class="box">
+        <h3 class="text-center">Tools</h3>
+        <div class="photo-gallery">
+          <!-- Add your square images with links and captions here -->
+          <div class="image-container">
+            <a href="tool1.html">
+              <img src="blast.png" alt="Tool 1" class="img-fluid">
+            </a>
+            <div class="caption">BLAST</div>
+          </div>
+			<div class="image-container">
+            <a href="http://bharatgenometrial.online/jbrowse/">
+              <img src="Jbrowse.png" alt="Tool 1" class="img-fluid">
+            </a>
+            <div class="caption">JBrowse</div>
+          </div>
+			<div class="image-container">
+            <a href="tool1.html">
+              <img src="synteny.png" alt="Tool 1" class="img-fluid">
+            </a>
+            <div class="caption">Synteny</div>
+          </div>
+			<div class="image-container">
+            <a href="http://bharatgenometrial.online/bgdbsite1/node/2">
+              <img src="data submitter.png" alt="Tool 1" class="img-fluid">
+            </a>
+            <div class="caption">Data Loader</div>
+          </div>
+			<div class="image-container">
+            <a href="tool1.html">
+              <img src="2.jfif" alt="Tool 1" class="img-fluid">
+            </a>
+            <div class="caption">Apple</div>
+          </div>
+          <div class="image-container">
+            <a href="tool2.html">
+              <img src="2.jfif" alt="Tool 2" class="img-fluid">
+            </a>
+            <div class="caption">Caption for Tool 2</div>
+          </div>
+          <!-- Add more images and captions as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add this code at the end of your HTML document, just before the closing </body> tag -->
+<footer class="bg-dark text-white">
+  <div class="container py-4">
+    <div class="row">
+      <!-- About Us Column -->
+      <div class="col-md-3">
+        <h5>About Us</h5>
+        <p>Placeholder text about your genomic site.</p>
+      </div>
+
+      <!-- Our Team Column -->
+      <div class="col-md-3">
+        <h5>Our Team</h5>
+        <a href="team.html">Learn More</a>
+      </div>
+
+      <!-- Social Media Column -->
+      <div class="col-md-3">
+        <h5>Social Media</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#" class="text-white">
+            <i class="fab fa-facebook"></i> Facebook&nbsp; </a>
+          </li>
+          <li>
+            <a href="#" class="text-white">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-white">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-white">
+              <i class="fab fa-twitter"></i> Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Us Column -->
+      <div class="col-md-3">
+        <h5>Contact Us</h5>
+        <address>
+          123 Main Street<br>
+          City, Country<br>
+          Zip Code<br>
+          Email: example@email.com
+        </address>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>&copy; <span id="currentYear"></span> Bharat Genome Database.org</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
