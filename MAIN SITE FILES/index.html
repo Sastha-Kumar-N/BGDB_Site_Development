@@ -30,26 +30,41 @@
     font-size: 36px; /* Custom font size for the heading */
   }
 </style>
-<!--* Magic Scroll*/ -->
+	
+	
+<!-- Magic Scroll -->
 <script>
 var MagicScrollOptions = {
   autoplay: 1000,
   mode: "cover-flow",
+  loop: "off",
   draggable: true,
-  lazyLoad: true
+  lazyLoad: true,
+  start: 0, // Start with the first item (index 0)
 };
 
-// Add custom loop functionality
 var magicScrollContainer = document.querySelector(".magic-scroll-container");
 
-magicScrollContainer.addEventListener("MagicScrollIndexChanged", function(event) {
-  if (event.detail.currentItem === 0) {
-    // If the current item is the first one, jump to the last item
-    MagicScroll.jumpTo(MagicScrollOptions.totalItems - 10);
+var magicScroll = new MagicScroll('.magic-scroll-container', MagicScrollOptions);
+
+function restartCarousel() {
+  setTimeout(function() {
+    magicScroll.show(0); // Go back to the first item
+    magicScroll.play(); // Restart autoplay
+  }, 3000); // Set the delay to 3 seconds (3000 milliseconds)
+}
+
+magicScroll.on('itemChange', function(event) {
+  if (event.index === magicScroll.getTotalItems() - 1) {
+    magicScroll.pause(); // Pause autoplay when reaching the last item
+    restartCarousel(); // Call the function to restart the carousel
   }
 });
 
+magicScroll.play();
 </script>
+
+	
 	
 	<style>
   /* Styling for the boxes */
