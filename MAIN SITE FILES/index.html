@@ -33,12 +33,24 @@
 <!--* Magic Scroll*/ -->
 <script>
 var MagicScrollOptions = {
-autoplay: 1000,
-mode: "cover-flow",
-draggable: true,
-lazyLoad: true
+  autoplay: 1000,
+  mode: "cover-flow",
+  draggable: true,
+  lazyLoad: true
 };
-</script>	
+
+// Add custom loop functionality
+var magicScrollContainer = document.querySelector(".magic-scroll-container");
+
+magicScrollContainer.addEventListener("MagicScrollIndexChanged", function(event) {
+  if (event.detail.currentItem === 0) {
+    // If the current item is the first one, jump to the last item
+    MagicScroll.jumpTo(MagicScrollOptions.totalItems - 10);
+  }
+});
+
+</script>
+	
 	<style>
   /* Styling for the boxes */
   .box {
