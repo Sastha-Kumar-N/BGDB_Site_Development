@@ -1,5 +1,3 @@
-// rss-widget.js
-
 document.addEventListener("DOMContentLoaded", function() {
     const rssFeedUrl = 'https://www.sciencedaily.com/rss/top/science.xml'; // Replace with your RSS feed URL
     const rssFeedWidget = document.getElementById('rss-feed-widget');
@@ -35,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .catch(error => {
                 console.error('Error fetching RSS feed:', error);
-                rssFeedWidget.innerHTML = 'Error fetching RSS feed.';
+                rssFeedWidget.innerHTML = 'Error fetching RSS feed. Check the browser console for details.';
             });
     }
 
