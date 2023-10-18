@@ -1342,7 +1342,7 @@ body.mcs-dragging button.mcs-button.mcs-horizontal.mcs-button-arrow {
 /* Carousel & Cover Flow */
 .MagicScroll[data-mode="carousel"],
 .MagicScroll[data-mode="cover-flow"] {
-    background: #FFFFFF;
+    background: #4f4f4f;
 }
 .MagicScroll[data-mode="carousel"] img,
 .MagicScroll[data-mode="cover-flow"] img {
