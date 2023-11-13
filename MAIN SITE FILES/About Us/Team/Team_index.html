@@ -9,6 +9,17 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 
+    <style>
+        /* Style for the outline box */
+        .team-member-box {
+            border: 2px solid #ddd; /* Border color */
+            padding: 20px; /* Padding inside the box */
+            margin: 20px; /* Margin outside the box */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Add any additional styles as needed */
+    </style>
 </head>
 
 <body style="background-color: #333; color: #fff;">
@@ -22,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#"> <span class="sr-only"><!--link text--></span></a>
                 </li>
                 <li class="nav-item">
                     <!-- Add your other navbar items here -->
@@ -58,23 +69,51 @@
         </div>
     </header>
 
-    <section>
-        <div class="container">
+    <section class="text-center">
+        <div class="container mx-auto">
             <div class="row">
-                <div class="col-lg-12 mb-4 mt-2 text-center">
+                <div class="col-lg-12 mb-4 mt-2">
                     <h2>Our Team</h2>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
-                    <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;"
-                        src="images/140X140.gif" data-holder-rendered="true">
-                    <h3>Lorem ipsum</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+            <!-- First team member -->
+            <div class="team-member-box container">
+                <div class="row">
+                    <!-- Left side content -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 text-center col-xl-5">
+                        <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;"
+                            src="images/140X140.gif" data-holder-rendered="true">
+                        <h3>Dr. Sabarinath Subramaniam</h3>
+                        <p>CEO,&nbsp;</p>
+                    </div>
+
+                    <!-- Right side content -->
+                    <div class="col-lg-8 col-md-6 col-sm-12 col-xl-7">
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+                            a galley of type and scrambled it to make a type specimen book. It has survived not only
+                            five centuries, but also the leap into electronic typesetting, remaining essentially
+                            unchanged. It was popularized in the 1960s with the release of Letraset sheets containing
+                            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                            PageMaker including versions of Lorem Ipsum.
+                        </p>
+                    </div>
                 </div>
-                <!-- Repeat similar code for other team members -->
+            </div>
+
+            <!-- Second team member (repeat similar code for other team members) -->
+            <div class="team-member-box container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 text-center col-xl-5">
+                        <img class="rounded-circle" alt="140x140" style="width: 140px; height: 140px;"
+                            src="images/140X140.gif" data-holder-rendered="true">
+                        <h3>Sastha Kumar N</h3>
+                        <p>Science Analyst & Developer,&nbsp;</p>
+                    </div>
+                    <!-- Add additional team members as needed -->
+                </div>
             </div>
         </div>
     </section>
