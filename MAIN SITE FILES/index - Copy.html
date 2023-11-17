@@ -4,17 +4,18 @@
 	<!-- Add Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="BGDB-index-files/magicscroll/magicscroll.css"/>
+	<link rel="stylesheet" href="BGDB-index-files/Welcome_css_java/styles.css .txt">
 <script src="BGDB-index-files/magicscroll/magicscroll.js"></script>
-<!-- Add Bootstrap JS (Popper.js and Bootstrap JS)  Bootstrap files-->
+<!-- Add Bootstrap JS (Popper.js and Bootstrap JS) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<script src="script.js"></script>
 <meta charset="utf-8">
 	<style>
 		.navbar-nav .nav-link:hover {
-  background-color: #28a745; /* Green color for the overlay */
+  background-color: #28a745; /* Green colors for the overlay */
   color: #fff; /* Text color on hover */
 }
 </style>
@@ -31,16 +32,8 @@
     font-size: 36px; /* Custom font size for the heading */
   }
 </style>
-<!-- Back Ground
-	<style>
-        body {
-background-image: url("BGDB-index-files/Logo/19376570_w66m_ob1h_190906.jpg");
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>-->
+	
+	
 <!-- Magic Scroll -->
 <script>
 var MagicScrollOptions = {
@@ -133,8 +126,7 @@ magicScroll.play();
 	<link rel="icon" type="image/icon-icon" href="icon.ico">
 </head>
 
-<body>
-	<!--<body class="fixed-background">-->
+	<body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
       <strong><a href="index.html" class="navbar-brand"> <img src="BGDB-index-files/Logo/bgdb-simple-white-bg-1.ico" alt="Logo" width="75" height="74" class="img-fluid rounded"> </a> <span style="font-size: 24px; font-weight: bold; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';"><a class="navbar-brand" href="#"> </a>Bharat Genome Database</strong><a class="navbar-brand" href="#"> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -146,7 +138,7 @@ magicScroll.play();
       <li class="nav-item">
         <a class="nav-link" href="Research-portal/index.html" style="color: black;">Research Portal</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown" style="margin-left: 15px;">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
           Tools
         </a>
@@ -157,28 +149,57 @@ magicScroll.play();
 			<a class="dropdown-item" href="bgdb/node/2">BGDB Data Depositer</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="News/index.html" style="color: black;">News</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="About Us/about.html" style="color: black;">About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="bgdb/node/1" style="color: black;">Contact Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="btn btn-primary" href="bgdb/user" style="color: black;">Login</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+		<li class="nav-item" style="margin-left: 15px;">
+ 		 <a class="nav-link" href="News/index.html" style="color: black;">News</a>
+		</li>
+		<li class="nav-item" style="margin-left: 20px;">
+  			<a class="nav-link" href="About Us/about.html" style="color: black;">About Us</a>
+				</li>
+				<li class="nav-item" style="margin-left: 15px;">
+  <a class="nav-link" href="bgdb/node/1" style="color: black;">Contact Us</a>
+</li>
+				<li class="nav-item" style="margin-left: 15px;">
+				  <a class="btn btn-primary" href="bgdb/user" style="color: black;">Login</a>
+				</li>
+					</ul>
+						</div>
 
-<style>
-  .navbar-nav .nav-link:hover {
-    background-color: #28a745;
-    color: #fff;
-  }
-</style>
+</nav>
+<section>
+		
+
+    <!-- Specific styles for the scrollingText section -->
+    <style>
+        #scrollingText {
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+
+        #scrollingText .lotus {
+            /* Add styles for lotus here */
+        }
+
+        #scrollingText #timeDate {
+            /* Add styles for timeDate here */
+        }
+    </style>
+</head>
+<body>
+    <div id="scrollingText">
+        <div class="lotus"></div>
+        <div id="timeDate"></div>
+        <marquee behavior="scroll" direction="left">
+            🌺 Welcome to Bharat Genome Database 🌺
+        </marquee>
+        <div class="lotus"></div>
+    </div></section>
+
+	
+	
 <!-- Add this code below your navigation bar -->
 <div id="imageCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators (optional) -->
@@ -256,6 +277,7 @@ magicScroll.play();
 </div> 
 <!-- Add this code below the film strip carousel -->
 <!-- Add this code below the film strip carousel -->
+
 <div class="container-fluid mt-4">
   <div class="row">
     <!-- Resources Box -->

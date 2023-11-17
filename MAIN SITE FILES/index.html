@@ -10,7 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<script src="script.js"></script>
 <meta charset="utf-8">
 	<style>
 		.navbar-nav .nav-link:hover {
@@ -125,7 +125,7 @@ magicScroll.play();
 	<link rel="icon" type="image/icon-icon" href="icon.ico">
 </head>
 
-<body>
+	<body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
       <strong><a href="index.html" class="navbar-brand"> <img src="BGDB-index-files/Logo/bgdb-simple-white-bg-1.ico" alt="Logo" width="75" height="74" class="img-fluid rounded"> </a> <span style="font-size: 24px; font-weight: bold; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';"><a class="navbar-brand" href="#"> </a>Bharat Genome Database</strong><a class="navbar-brand" href="#"> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -164,75 +164,38 @@ magicScroll.play();
 						</div>
 
 </nav>
-	<!---welcome-->	
-      <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
+<section>
+		
 
+    <!-- Specific styles for the scrollingText section -->
+    <style>
         #scrollingText {
-            background-color: black;
-            color: goldenrod;
+            background-color: purple;
+            color: white;
             padding: 10px;
             white-space: nowrap;
             display: flex;
             align-items: center;
         }
 
-        #lotus {
-            font-size: 1.5em;
-            margin-right: 5px;
+        #scrollingText .lotus {
+            /* Add styles for lotus here */
         }
 
-        #timeDate {
-            margin-left: auto;
-            font-size: 1em;
-        }
-
-        #scrollingText marquee {
-            display: block;
-            width: 100%;
-            height: auto;
-            margin: 0;
-            padding: 0;
+        #scrollingText #timeDate {
+            /* Add styles for timeDate here */
         }
     </style>
 </head>
 <body>
-
-<div id="scrollingText">
-    <div id="lotus">🌺</div>
-    <div id="timeDate"></div> <!-- Container for time and date -->
-    <marquee behavior="scroll" direction="left">
-        Welcome to Bharat Genome Database
-    </marquee>
-    <div id="lotus">🌺</div>
-</div>
-
-<script>
-    function updateTimeDate() {
-        var now = new Date();
-        var timeDateContainer = document.getElementById("timeDate");
-        var formattedTimeDate = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-        timeDateContainer.textContent = formattedTimeDate;
-    }
-
-    // Update time and date every second
-    setInterval(updateTimeDate, 1000);
-
-    // Initial update
-    updateTimeDate();
-</script>
-	
-	<!--Welcome end-->
-<style>
-  .navbar-nav .nav-link:hover {
-    background-color: #28a745;
-    color: #fff;
-  }
-</style>
+    <div id="scrollingText">
+        <div class="lotus"></div>
+        <div id="timeDate"></div>
+        <marquee behavior="scroll" direction="left">
+            🌺 Welcome to Bharat Genome Database 🌺
+        </marquee>
+        <div class="lotus"></div>
+    </div></section>
 
 	
 	
@@ -313,6 +276,7 @@ magicScroll.play();
 </div> 
 <!-- Add this code below the film strip carousel -->
 <!-- Add this code below the film strip carousel -->
+
 <div class="container-fluid mt-4">
   <div class="row">
     <!-- Resources Box -->
