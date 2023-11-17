@@ -164,13 +164,78 @@ magicScroll.play();
 						</div>
 
 </nav>
+	<!---welcome-->	
+      <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
+        #scrollingText {
+            background-color: black;
+            color: goldenrod;
+            padding: 10px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+
+        #lotus {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        #timeDate {
+            margin-left: auto;
+            font-size: 1em;
+        }
+
+        #scrollingText marquee {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="scrollingText">
+    <div id="lotus">🌺</div>
+    <div id="timeDate"></div> <!-- Container for time and date -->
+    <marquee behavior="scroll" direction="left">
+        Welcome to Bharat Genome Database
+    </marquee>
+    <div id="lotus">🌺</div>
+</div>
+
+<script>
+    function updateTimeDate() {
+        var now = new Date();
+        var timeDateContainer = document.getElementById("timeDate");
+        var formattedTimeDate = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+        timeDateContainer.textContent = formattedTimeDate;
+    }
+
+    // Update time and date every second
+    setInterval(updateTimeDate, 1000);
+
+    // Initial update
+    updateTimeDate();
+</script>
+	
+	<!--Welcome end-->
 <style>
   .navbar-nav .nav-link:hover {
     background-color: #28a745;
     color: #fff;
   }
 </style>
+
+	
+	
 <!-- Add this code below your navigation bar -->
 <div id="imageCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators (optional) -->
