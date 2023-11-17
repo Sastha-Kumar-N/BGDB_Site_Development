@@ -164,9 +164,7 @@ magicScroll.play();
 						</div>
 
 </nav>
-<section>
-		
-
+<section><!--Welcome marquee>
     <!-- Specific styles for the scrollingText section -->
     <style>
         #scrollingText {
@@ -177,25 +175,56 @@ magicScroll.play();
             display: flex;
             align-items: center;
         }
-
-        #scrollingText .lotus {
-            /* Add styles for lotus here */
+  #lotus {
+            font-size: 1.5em;
+            margin-right: 5px;
         }
 
-        #scrollingText #timeDate {
-            /* Add styles for timeDate here */
+        #timeDate 
+		{
+            margin-left: auto;
+            font-size: 1em;
+            display: flex;
+            justify-content: space-between;
+            width: 160px; /* Set a fixed width for better alignment */
         }
+
+        #scrollingText marquee {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+      
     </style>
 </head>
 <body>
     <div id="scrollingText">
-        <div class="lotus"></div>
-        <div id="timeDate"></div>
-        <marquee behavior="scroll" direction="left">
-            🌺 Welcome to Bharat Genome Database 🌺
-        </marquee>
-        <div class="lotus"></div>
-    </div></section>
+    <div id="lotus"></div>
+    <div id="timeDate"></div> <!-- Container for time and date -->
+    <marquee behavior="scroll" direction="left">
+       🌺 Welcome to Bharat Genome Database 🌺
+    </marquee>
+    <div id="lotus"></div>
+</div>
+<script>
+    function updateTimeDate() {
+        var now = new Date();
+        var timeDateContainer = document.getElementById("timeDate");
+        var formattedTimeDate = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+        timeDateContainer.textContent = formattedTimeDate;
+    }
+
+    // Update time and date every second
+    setInterval(updateTimeDate, 1000);
+
+    // Initial update
+    updateTimeDate();
+</script>	
+    </section>
+
 
 	
 	
