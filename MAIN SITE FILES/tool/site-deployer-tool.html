@@ -47,8 +47,8 @@
             <li><a href="#">4templates</a></li>
             <li><a href="#">TemplateMonster</a></li>
             <li><a href="#">Fotolia.com</a></li>
-            <li><a href="#">Text Link Ads</a></li>-->
-          </ul>
+            <li><a href="#">Text Link Ads</a></li>--
+          </ul>-->
         </div>
         <div class="sidebox">
           <h1>Wise Words</h1>
@@ -85,28 +85,35 @@
 git clone https://github.com/shreyas-a-s/website-tripal.git<br>
 cd website-tripal/<br>
 ./install.sh <br></code></p>
-        <h3>Example Lists</h3>
+        <h3>single line command from a terminal</h3>
         <ol>
-          <li><span>example of ordered list</span></li>
-          <li><span>uses span to color the numbers</span></li>
+          <li><span><code>sudo apt update && sudo apt install git -y && git clone https://github.com/shreyas-a-s/website-tripal.git && cd website-tripal/ && ./install.sh</code></span></li>
+        <!--  <li><span>uses span to color the numbers</span></li>
         </ol>
         <ul>
           <li><span>example of unordered list</span></li>
           <li><span>uses span to color the bullets</span></li>
-        </ul>
+        </ul>-->
         <h3>Blockquote</h3>
         <blockquote>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat....</p>
         </blockquote>
-        <h3>Image and text</h3>
-        <p> <a href="#"><img src="images/firefox-gray.jpg" width="100" height="121" alt="firefox-gray"  class="float-left" /></a> To achieve our objective, we extensively studied the Linux environment, mainly Debian Linux as it ws the most popular, in order to understand the root causes of issues we faced in relation to PHP versions and Tripal dependencies. With the knowledge we gained, we started the creation of the deployment script, which primarily uses 'bash' scripting language.
-- We opted for bash due to its seamless command-line integration, capacity for customization, flexibility, and, notably, its default presence on the majority of Linux systems.
-- Since bash is basically a command-line program and not the most user-friendly when it comes to new-to-linux biologists, we needed a way to make the execution of script visually understandable and followable to them. For that we chose a program called whiptail.
-- It's job is to display some colorful graphics in the linux command-line which is generally some white text in black background. Whiptail gets called in multiple parts of the installation for achieving two main tasks. One is to to give a visual confirmation when taking user inputs because the output in other parts of the script was too plain. Second is to provide instructions to the user when user interaction is necessary. 
-- We separated the single install sctipt that we drafted at the beginning of the work into modules and modified each module script to allow them to be used independently allowing users who want only a particular feature to take that particular script and execute to get that. Eg: To setup tripal daemon in an already existing tripal system, the user only need to run install-tripal-daemon.sh script.
-- Another challenge that we needed to solve was that tripal, during it's initial setup requires a connection to be established to raw.githubusercontent.com. That is where its initial configuration data is stored which needs to be retrieved to local machine. But here in India, a lot of ISPs are blocking this open source website url. Hence we needed to incorporate a warning in the script by detecting this issue programmatically.
-- Some tripal modules like tripal_daemon and field_formatter_settings needed to be patched with fixes for some unexpected issues which were not officially incorporated into their respective packages atleast for tripal 3 and drupal 7.
- </p>
+        <h3>Methodology</h3>
+    <p class="justify">
+  <ul>
+    <li>We extensively studied the Linux environment, focusing on Debian Linux, the most popular distribution, to understand the root causes of issues related to PHP versions and Tripal dependencies.</li>
+    <li>With the gained knowledge, we initiated the creation of a deployment script primarily using the 'bash' scripting language.</li>
+    <li>We chose bash for its seamless command-line integration, customization capacity, flexibility, and its default presence on the majority of Linux systems.</li>
+    <li>To make the script execution visually understandable to biologists new to Linux, we utilized a program called whiptail.</li>
+    <ul>
+      <li>Whiptail displays colorful graphics in the Linux command-line, enhancing visual confirmation for user inputs and providing instructions when necessary.</li>
+    </ul>
+    <li>We divided the initial single install script into modules, allowing users to execute specific scripts for particular features. For example, users can run install-tripal-daemon.sh to set up Tripal daemon in an existing system.</li>
+    <li>We addressed the challenge of ISPs in India blocking raw.githubusercontent.com, a required connection during Tripal's initial setup, by programmatically detecting and incorporating a warning in the script.</li>
+    <li>Some Tripal modules, such as tripal_daemon and field_formatter_settings, required patches for unexpected issues not officially addressed in their respective packages, especially for Tripal 3 and Drupal 7.</li>
+  </ul>
+</p>
+
         <h3>Example Form</h3>
         <form action="#">
           <p>
@@ -120,7 +127,7 @@ cd website-tripal/<br>
             <input class="button" type="submit" />
           </p>
         </form>
-        <br />
+        <br/>
       </div>
     </div>
   </div>
