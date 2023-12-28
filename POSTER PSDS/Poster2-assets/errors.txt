@@ -1,0 +1,5 @@
+[2023-12-28 19:04:25] layer "www.bgdb.org/tool/site-deployer.html": Unsupported extension: html
+[2023-12-28 19:04:25] layer "Dr.Sabarinath Subramaniam Director Shiva Sakthi Foundation, BGD": Expected end of input but "S" found.
+[2023-12-28 19:04:25] layer "Fig .A": Unsupported extension: a
+[2023-12-28 19:04:25] layer "Fig .B": Unsupported extension: b
+[2023-12-28 19:04:25] layer "Fig .A copy 2": Expected end of input but "c" found.
