@@ -31,9 +31,9 @@ h1, h2, h3 {
 	font: bold 1em 'Trebuchet MS', Tahoma, Sans-serif;
 	color: #65944A;
 }
-h1 { font-size: 1.4em; }
-h2 { font-size: 1.2em; text-transform: uppercase;}
-h3 { font-size: 1.2em; }
+h1 { font-size: 1.2em; }
+h2 { font-size: 1.0em; text-transform: uppercase;}
+h3 { font-size: 1.0em; }
 
 p, h1, h2, h3 {
 	margin: 10px 15px;
