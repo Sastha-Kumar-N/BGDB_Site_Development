@@ -31,7 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function startGame() {
-    shuffledAminoAcids = shuffle([...aminoAcids, ...aminoAcids]);
+    // Shuffle the full amino acids array
+    shuffledAminoAcids = shuffle([...aminoAcids]);
+
+    // Take the first 10 elements to form a subset
+    const subsetAminoAcids = shuffledAminoAcids.slice(0, 5);
+
+    // Duplicate the subset to have pairs
+    shuffledAminoAcids = shuffle([...subsetAminoAcids, ...subsetAminoAcids]);
+
+    // Create and display the cards
     createCards();
 }
 
@@ -74,6 +83,11 @@ function checkForMatch() {
         // Matched
         card1.removeEventListener('click', flipCard);
         card2.removeEventListener('click', flipCard);
+
+        // Display the full name in a modal
+        setTimeout(() => {
+            displayModal(shuffledAminoAcids[index1].name);
+        }, 500);
     } else {
         // Not matched
         card1.textContent = '?';
@@ -81,6 +95,20 @@ function checkForMatch() {
     }
 
     flippedCards = [];
+}
+
+function displayModal(fullName) {
+    const modalContainer = document.getElementById('modal-container');
+    const modalContent = document.getElementById('modal-content-text');
+
+    modalContent.textContent = `You've found a match!\nAmino Acid: ${fullName}`;
+
+    modalContainer.style.display = 'block';
+}
+
+function closeModal() {
+    const modalContainer = document.getElementById('modal-container');
+    modalContainer.style.display = 'none';
 }
 
 function shuffle(array) {
