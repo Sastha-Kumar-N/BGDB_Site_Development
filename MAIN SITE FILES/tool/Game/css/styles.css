@@ -50,10 +50,12 @@ nav a {
 }
 
 .game-header {
-  background-color: #3498db; /* Choose a color that fits your design */
+  background-color: #db8134  ; /* Choose a color that fits your design */
   color: #fff; /* Text color */
   padding: 20px;
+width: 50%;
   border-radius: 50px;
+margin: 0 auto;
 }
 
 .game-header h2 {
