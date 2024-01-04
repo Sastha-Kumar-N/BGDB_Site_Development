@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>BGDB Aminoacid Matching Game</title>
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 <header>Hello</header>
 	<style>
 		
@@ -36,33 +34,22 @@
             line-height: 100px;
         }
 		.rules-container {
-            margin-top: 10px;
-            text-align: center;
-        }
+    margin-top: 10px;
+    text-align: center;
+    border: 2px solid green; /* Green outline */
+    background-color: transparent; /* Transparent background */
+    padding: 10px; /* Add padding for spacing */
+}
+
+.rules-container ul {
+    list-style-type: disc; /* Use bullet points for the list */
+    padding-left: 20px; /* Adjust the padding for better alignment */
+}
 		
         
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-      <li class="nav-item"> <a class="nav-link" href="#">Link</a> </li>
-      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a> </div>
-      </li>
-      <li class="nav-item"> <a class="nav-link disabled" href="#">Disabled</a> </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
 	<br>
     <div class="game-container" id="game-container"></div>
 
@@ -70,7 +57,7 @@
         <h2>Genomic Matching Game Rules</h2>
         <p>Welcome to the Genomic Matching Game! The rules are simple:</p>
         <ol>
-            <li>Click on a card to reveal the genomic sequence it represents.</li>
+          <li>Click on a card to reveal the Amino acid sequence it represents.</li>
             <li>Click on a second card to reveal its sequence.</li>
             <li>If the sequences on the two flipped cards match, the cards stay face-up.</li>
             <li>If the sequences do not match, both cards are flipped face-down again.</li>
@@ -79,10 +66,6 @@
     </div>
 
 <script src="genomicGame.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap-4.4.1.js"></script>
-
 <!-- Add this div at the end of your body -->
 <div id="modal-container" class="modal-container">
     <div class="modal-content">
