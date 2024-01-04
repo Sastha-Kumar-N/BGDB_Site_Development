@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Genomic Matching Game</title>
+    <title>Amino Acid Matching Game</title>
     <style>
         body {
             display: flex;
@@ -27,6 +27,7 @@
             user-select: none;
             font-size: 20px;
             line-height: 100px;
+            position: relative;
         }
         .rules-container {
             margin-top: 20px;
@@ -38,17 +39,17 @@
     <div class="game-container" id="game-container"></div>
 
     <div class="rules-container">
-        <h2>Genomic Matching Game Rules</h2>
-        <p>Welcome to the Genomic Matching Game! The rules are simple:</p>
+        <h2>Amino Acid Matching Game Rules</h2>
+        <p>Welcome to the Amino Acid Matching Game! The rules are simple:</p>
         <ol>
-            <li>Click on a card to reveal the genomic sequence it represents.</li>
+            <li>Click on a card to reveal the 3-letter amino acid sequence it represents.</li>
             <li>Click on a second card to reveal its sequence.</li>
-            <li>If the sequences on the two flipped cards match, the cards stay face-up.</li>
+            <li>If the sequences on the two flipped cards match, the cards stay face-up, and the full amino acid name is displayed above them.</li>
             <li>If the sequences do not match, both cards are flipped face-down again.</li>
             <li>Match all pairs to win the game!</li>
         </ol>
     </div>
 
-    <script src="genomicGame.js"></script>
+    <script src="aminoAcidGame.js"></script>
 </body>
 </html>

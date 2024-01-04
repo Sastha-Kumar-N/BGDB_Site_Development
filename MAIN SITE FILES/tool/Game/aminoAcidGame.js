@@ -1,5 +1,4 @@
-// Amino acid data
-const aminoAcids = [
+const aminoAcidSequences = [
     { code: 'Ala', name: 'Alanine' },
     { code: 'Arg', name: 'Arginine' },
     { code: 'Asn', name: 'Asparagine' },
@@ -22,8 +21,7 @@ const aminoAcids = [
     { code: 'Val', name: 'Valine' },
 ];
 
-// Shuffled amino acids
-let shuffledAminoAcids = [];
+let shuffledSequences = [];
 let flippedCards = [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,14 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function startGame() {
-    shuffledAminoAcids = shuffle([...aminoAcids, ...aminoAcids]);
+    shuffledSequences = shuffle([...aminoAcidSequences, ...aminoAcidSequences]);
     createCards();
 }
 
 function createCards() {
     const gameContainer = document.getElementById('game-container');
 
-    shuffledAminoAcids.forEach((acid, index) => {
+    shuffledSequences.forEach((aminoAcid, index) => {
         const card = document.createElement('div');
         card.classList.add('card');
         card.dataset.index = index;
@@ -54,39 +52,4 @@ function flipCard() {
     const index = selectedCard.dataset.index;
 
     // Prevent flipping the same card twice
-    if (flippedCards.length < 2 && !flippedCards.includes(index)) {
-        selectedCard.textContent = shuffledAminoAcids[index].code;
-        flippedCards.push(index);
-
-        // Check for a match when two cards are flipped
-        if (flippedCards.length === 2) {
-            setTimeout(checkForMatch, 500);
-        }
-    }
-}
-
-function checkForMatch() {
-    const [index1, index2] = flippedCards;
-    const card1 = document.querySelector(`.card[data-index="${index1}"]`);
-    const card2 = document.querySelector(`.card[data-index="${index2}"]`);
-
-    if (shuffledAminoAcids[index1].code === shuffledAminoAcids[index2].code) {
-        // Matched
-        card1.removeEventListener('click', flipCard);
-        card2.removeEventListener('click', flipCard);
-    } else {
-        // Not matched
-        card1.textContent = '?';
-        card2.textContent = '?';
-    }
-
-    flippedCards = [];
-}
-
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
+    if (flippedCards.length < 2 && !flippedCards.includes
