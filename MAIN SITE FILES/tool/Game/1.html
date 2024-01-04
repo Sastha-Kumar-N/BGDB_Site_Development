@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
     <title>BGDB Aminoacid Matching Game</title>
-<header>Hello</header>
+ <header>
+    <div class="logo">
+      <img src="path/to/your/logo.png" alt="Logo">
+    </div>
+    <h1>BHARAT GENOME DTABASE.ORG</h1>
+  </header>
+	
 	<style>
 		
 		
@@ -73,7 +80,58 @@
             right: 10px;
             cursor: pointer;
         }	
-        
+        .rules-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rules-container h2 {
+    color: #333;
+    text-align: center;
+}
+
+.rules-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.rules-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.rules-container li {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+}
+
+.rules-container li::before {
+    content: "\2022"; /* Use a solid circle bullet point */
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Style the links if there are any */
+.rules-container a {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+/* Hover effect for links */
+.rules-container a:hover {
+    color: #0056b3;
+}
+
     </style>
 	<script>
         // Add the JavaScript code here
@@ -90,17 +148,18 @@
 	<br>
     <div class="game-container" id="game-container"></div>
 
-    <div class="rules-container">
-        <h2>Amino acid Matching Game Rules</h2>
-        <p>Welcome to the Genomic Matching Game! The rules are simple:</p>
-        <ol>
-          <li>Click on a card to reveal the Amino acid sequence it represents.</li>
-            <li>Click on a second card to reveal its sequence.</li>
-            <li>If the sequences on the two flipped cards match, the cards stay face-up.</li>
-            <li>If the sequences do not match, both cards are flipped face-down again.</li>
-            <li>Match all pairs to win the game!</li>
-        </ol>
-    </div>
+<div class="rules-container">
+    <h2>Amino acid Matching Game Rules</h2>
+    <p>Welcome to the Genomic Matching Game! The rules are simple:</p>
+    <ul>
+        <li>Click on a card to reveal the Amino acid sequence it represents.</li>
+        <li>Click on a second card to reveal its sequence.</li>
+        <li>If the sequences on the two flipped cards match, the cards stay face-up.</li>
+        <li>If the sequences do not match, both cards are flipped face-down again.</li>
+        <li>Match all pairs to win the game!</li>
+    </ul>
+</div>
+
 
 <script src="genomicGame.js"></script>
 <!-- Add this div at the end of your body -->
