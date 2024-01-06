@@ -1,25 +1,25 @@
-// Amino acid data
+// Amino acid data with image URLs
 const aminoAcids = [
-    { code: 'Ala', name: 'Alanine' },
-    { code: 'Arg', name: 'Arginine' },
-    { code: 'Asn', name: 'Asparagine' },
-    { code: 'Asp', name: 'Aspartic Acid' },
-    { code: 'Cys', name: 'Cysteine' },
-    { code: 'Glu', name: 'Glutamic Acid' },
-    { code: 'Gln', name: 'Glutamine' },
-    { code: 'Gly', name: 'Glycine' },
-    { code: 'His', name: 'Histidine' },
-    { code: 'Ile', name: 'Isoleucine' },
-    { code: 'Leu', name: 'Leucine' },
-    { code: 'Lys', name: 'Lysine' },
-    { code: 'Met', name: 'Methionine' },
-    { code: 'Phe', name: 'Phenylalanine' },
-    { code: 'Pro', name: 'Proline' },
-    { code: 'Ser', name: 'Serine' },
-    { code: 'Thr', name: 'Threonine' },
-    { code: 'Trp', name: 'Tryptophan' },
-    { code: 'Tyr', name: 'Tyrosine' },
-    { code: 'Val', name: 'Valine' },
+    { code: 'Ala', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Arg', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Asn', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Asp', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Cys', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Glu', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Gln', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Gly', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'His', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Ile', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Leu', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Lys', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Met', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Phe', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Pro', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Ser', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Thr', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Trp', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Tyr', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
+    { code: 'Val', image: 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png' },
 ];
 
 // Shuffled amino acids
@@ -51,9 +51,13 @@ function createCards() {
         const card = document.createElement('div');
         card.classList.add('card');
         card.dataset.index = index;
-        card.textContent = '?';
-        card.addEventListener('click', flipCard);
 
+        // Create an image element for each card
+        const image = document.createElement('img');
+        image.src = 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png'; // Set a default hidden image URL
+        card.appendChild(image);
+
+        card.addEventListener('click', flipCard);
         gameContainer.appendChild(card);
     });
 }
@@ -64,7 +68,10 @@ function flipCard() {
 
     // Prevent flipping the same card twice
     if (flippedCards.length < 2 && !flippedCards.includes(index)) {
-        selectedCard.textContent = shuffledAminoAcids[index].code;
+        // Display the actual image on flip
+        const imageUrl = shuffledAminoAcids[index].image;
+        selectedCard.firstChild.src = imageUrl;
+
         flippedCards.push(index);
 
         // Check for a match when two cards are flipped
@@ -84,24 +91,25 @@ function checkForMatch() {
         card1.removeEventListener('click', flipCard);
         card2.removeEventListener('click', flipCard);
 
-        // Display the full name in a modal
+        // Display the matched amino acid image in a modal
         setTimeout(() => {
-            displayModal(shuffledAminoAcids[index1].name);
+            displayModal(shuffledAminoAcids[index1].image);
         }, 500);
     } else {
         // Not matched
-        card1.textContent = '?';
-        card2.textContent = '?';
+        card1.firstChild.src = 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png';
+        card2.firstChild.src = 'D:\Site-Development\BGDB_Site_Development\MAIN SITE FILES\tool\Game -dev\images\alanine.png';
     }
 
     flippedCards = [];
 }
 
-function displayModal(fullName) {
+function displayModal(imageUrl) {
     const modalContainer = document.getElementById('modal-container');
-    const modalContent = document.getElementById('modal-content-text');
+    const modalContent = document.getElementById('modal-content-img');
 
-    modalContent.textContent = `You've found a match!\nAmino Acid: ${fullName}`;
+    // Display the matched amino acid image in the modal
+    modalContent.src = imageUrl;
 
     modalContainer.style.display = 'block';
 }
